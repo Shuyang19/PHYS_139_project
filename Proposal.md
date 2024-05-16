@@ -2,6 +2,9 @@
 
  - Background
 In high-energy physics, the identification and analysis of particle jets is fundamental to understanding the outcomes of particle collisions, such as those occurring at the Large Hadron Collider (LHC). Jets are collimated sprays of particles resulting from the hadronization of quarks and gluons. These jets contain valuable information about the fundamental interactions and particles involved in the collision processes. Among the numerous particles produced in such collisions, the Higgs boson plays a pivotal role due to its association with the mechanism that gives mass to other particles.
+<span style="color:red">
+Text content
+</span>
 
 Identifying high-transverse-momentum Higgs bosons decaying into bottom quark-antiquark pairs (𝐻→𝑏𝑏ˉH→b bˉ) is particularly challenging. This process is often obscured by the overwhelming background of ordinary jets from quark and gluon interactions. Traditional jet tagging algorithms rely on specific features and thresholds to differentiate between these signals and background noise. However, as the complexity and volume of collision data increase, these conventional methods face limitations in performance and accuracy.
 
