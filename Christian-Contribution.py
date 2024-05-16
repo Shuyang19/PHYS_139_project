@@ -7,7 +7,7 @@ from torch_geometric.nn import MessagePassing
 from torch.nn import Sequential as Seq, Linear as Lin, ReLU, BatchNorm1d
 
 class InteractionNetwork(MessagePassing):
-    def __init__(self):
+    def __init__(self, node_feature_size, vertex_feature_size):
         super(InteractionNetwork, self).__init__(aggr='add')  # "Add" aggregation.
         # Interaction networks for particle-particle interactions
         self.mlp1 = Seq(Lin(2 * node_feature_size, 128), ReLU(), Lin(128, node_feature_size))
@@ -36,7 +36,7 @@ class InteractionNetwork(MessagePassing):
 
 # Data Preparation
 # Load data into 'data_list', where each data is a PyG Data object
-# Ex: data = Data(x=node_features, edge_index=edge_indices, edge_attr=edge_attributes, y=labels)
+# Example: data = Data(x=node_features, edge_index=edge_indices, edge_attr=edge_attributes, y=labels)
 # node_features: [num_particles, num_features_per_particle]
 # edge_indices: [2, num_edges]
 # edge_attributes: [num_edges, num_features_per_vertex]
@@ -48,7 +48,7 @@ loader = DataLoader(data_list, batch_size=32, shuffle=True)
 # Model Initialization
 node_feature_size = 30  # Adjust based on your dataset
 vertex_feature_size = 14  # Adjust based on your dataset
-model = InteractionNetwork()
+model = InteractionNetwork(node_feature_size, vertex_feature_size)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.BCELoss()
 
@@ -65,9 +65,58 @@ def train():
         total_loss += loss.item()
     return total_loss / len(loader)
 
-# add validation and possibly testing loops
-# implement saving the model and monitoring performance metrics
+# Validation Loop
+def validate(loader):
+    model.eval()
+    total_loss = 0
+    correct = 0
+    for data in loader:
+        with torch.no_grad():
+            out = model(data.x, data.edge_index, data.edge_attr)
+            loss = criterion(out, data.y)
+            total_loss += loss.item()
+            pred = (out > 0.5).float()
+            correct += pred.eq(data.y.view_as(pred)).sum().item()
+    accuracy = correct / len(loader.dataset)
+    return total_loss / len(loader), accuracy
 
+# Load your data into data_list
+# data_list = load_your_data_function()
+train_loader = DataLoader(data_list[:int(0.8 * len(data_list))], batch_size=32, shuffle=True)
+val_loader = DataLoader(data_list[int(0.8 * len(data_list)):], batch_size=32, shuffle=False)
+
+# Training and Validation
+num_epochs = 100
+best_val_loss = float('inf')
+for epoch in range(num_epochs):
+    train_loss = train()
+    val_loss, val_accuracy = validate(val_loader)
+    print(f'Epoch: {epoch+1}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}')
+    if val_loss < best_val_loss:
+        best_val_loss = val_loss
+        torch.save(model.state_dict(), 'best_model.pth')
+
+# Load the best model for inference or further training
+# model.load_state_dict(torch.load('best_model.pth'))
+
+# Add a testing loop if needed
+def test(loader):
+    model.eval()
+    total_loss = 0
+    correct = 0
+    for data in loader:
+        with torch.no_grad():
+            out = model(data.x, data.edge_index, data.edge_attr)
+            loss = criterion(out, data.y)
+            total_loss += loss.item()
+            pred = (out > 0.5).float()
+            correct += pred.eq(data.y.view_as(pred)).sum().item()
+    accuracy = correct / len(loader.dataset)
+    return total_loss / len(loader), accuracy
+
+test_loader = DataLoader(data_list[int(0.9 * len(data_list)):], batch_size=32, shuffle=False)
+test_loss, test_accuracy = test(test_loader)
+print(f'Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}')
 
 
 
