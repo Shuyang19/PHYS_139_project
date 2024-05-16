@@ -18,7 +18,11 @@ Deep learning techniques, especially those utilizing graph neural networks (GNNs
 
  - Introduction:
    
-In this project, we propose an advanced algorithm based on an interaction network to identify high-transverse-momentum Higgs bosons decaying to bottom quark-antiquark pairs and distinguish them from ordinary jets that arise from quark and gluon interactions at short distances. Our approach models the jet as a combination of particle-to-particle and particle-to-vertex interactions, allowing for a detailed representation of the jet substructure.
+In this project, we propose an advanced algorithm based on an interaction network to identify high-transverse-momentum Higgs bosons decaying to bottom quark-antiquark pairs and distinguish them from ordinary jets that arise from quark and gluon interactions at short distances. 
+
+(interaction network(IN) were designed to learn complex pairwise relationships between physical objects represented as nodes in a graph.)
+
+Our approach models the jet as a combination of particle-to-particle and particle-to-vertex interactions, allowing for a detailed representation of the jet substructure.
 
 The algorithm's inputs include features of the reconstructed charged particles within a jet and the secondary vertices associated with these particles. By describing the jet shower through these interactions, the model is trained to learn a jet representation optimized for the classification task. The training is performed on simulated datasets of realistic LHC collisions provided by the CMS Collaboration through the CERN Open Data Portal.
 
