@@ -2,8 +2,11 @@
 
  - Background:
    
-In high-energy physics, the identification and analysis of particle jets is fundamental to understanding the outcomes of particle collisions, such as those occurring at the Large Hadron Collider (LHC). Jets are collimated sprays of particles resulting from the hadronization of quarks and gluons. These jets contain valuable information about the fundamental interactions and particles involved in the collision processes. Among the numerous particles produced in such collisions, the Higgs boson plays a pivotal role due to its association with the mechanism that gives mass to other particles.
+In high-energy physics, the identification and analysis of particle jets is fundamental to understanding the outcomes of particle collisions, such as those occurring at the Large Hadron Collider (LHC). Jets are collimated sprays of particles resulting from the hadronization of quarks and gluons. These jets contain valuable information about the fundamental interactions and particles involved in the collision processes. 
 
+Traditionally, jet tagging was limited on light-flavor particles, but since the large center-of-mass avaliable in LHC collisions, heavy particles would also be invovled, and boosted-jet topologies are accessible, which makes jat-tagging became a more complex task.
+
+Among the numerous particles produced in such collisions, the Higgs boson plays a pivotal role due to its association with the mechanism that gives mass to other particles.
 
 Identifying high-transverse-momentum Higgs bosons decaying into bottom quark-antiquark pairs (𝐻→𝑏𝑏ˉH→b bˉ) is particularly challenging. This process is often obscured by the overwhelming background of ordinary jets from quark and gluon interactions. Traditional jet tagging algorithms rely on specific features and thresholds to differentiate between these signals and background noise. However, as the complexity and volume of collision data increase, these conventional methods face limitations in performance and accuracy.
 
@@ -11,13 +14,7 @@ Identifying high-transverse-momentum Higgs bosons decaying into bottom quark-ant
    
 The accurate identification of Higgs bosons decaying into bottom quark-antiquark pairs is crucial for advancing our understanding of the Standard Model and exploring potential new physics beyond it. Improvements in this area can lead to more precise measurements of the Higgs boson properties, including its couplings and self-interactions, which are essential for verifying theoretical predictions and discovering any deviations that could hint at new physics phenomena.
 
-- Shuyang add:
-  
-traditionally, jet tagging was limited on light-flavor particles, but since the large center-of-mass avaliable in LHC collisions, heavy particles would also be invovled, and boosted-jet topologies emerged, which can show moew information of collision.
-
-
-Deep learning techniques, especially those utilizing graph neural networks (GNNs), have shown great promise in capturing the complex interactions within jets. Unlike traditional methods, GNNs can effectively model the relational structure between particles, making them well-suited for tasks like jet tagging. By leveraging the latest advancements in deep learning and graph-based representations, we aim to develop an algorithm that significantly enhances the identification performance of 
-𝐻→𝑏𝑏ˉH→b bˉdecays, thereby providing a powerful tool for high-energy physics research.
+Deep learning techniques, especially those utilizing graph neural networks (GNNs), have shown great promise in capturing the complex interactions within jets. Unlike traditional methods, GNNs can effectively model the relational structure between particles, making them well-suited for tasks like jet tagging. By leveraging the latest advancements in deep learning and graph-based representations, we aim to develop an algorithm that significantly enhances the identification performance of 𝐻→𝑏𝑏ˉH→b bˉdecays, thereby providing a powerful tool for high-energy physics research.
 
  - Introduction:
    
