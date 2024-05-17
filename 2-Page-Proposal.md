@@ -52,3 +52,36 @@ Mass Decorrelation Techniques: Implement and document methods for unbiased taggi
 Data Handling and Preparation Pipeline: Modular pipeline for CMS open data and simulated datasets.
 Integration with Experimental Workflows: Guidelines for model integration into high-energy physics workflows.
 Published Research Paper: Findings published in a peer-reviewed journal or conference.
+# Schedule
+A: Molan Li
+B: Yaran Yang 
+C: Shuyang Zhang
+D: Michael Zhang
+E: Christian Amezcua  
+- Week 8
+Create github(done) 
+Preprocess data (A+B): 
+Check the CERN Open Data Portal, choosing the collision data and simulated data of H → b¯b jets
+Split data into training and testing data
+Exploratory data analysis(C+D+E):
+Visualizing data(create histogram)
+Generate statics information
+Record finding and potential features
+- Week 9
+Define Metrics (Done)
+Create simple benchmark (A + D)
+Build a simple model, train the model using the data 
+Tune hyperparameters to ensure model convergence and prevent overfitting.
+Train and Evaluate (B + E)
+Train the simple benchmark model
+Evaluate its performance (Compare performance against the metrics).
+- Week 10
+Create more advanced model (A + B + C)
+Build more expert IN model
+Train and Compare Performance (C + D + E)
+Train IN model (and DDB model)
+Evaluate and compare performance (IN, DDB, benchmark model)
+Optimize the model architecture for performance and scalability.
+Identify results and make a conclusion (All people)
+
+
