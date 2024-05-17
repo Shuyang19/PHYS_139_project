@@ -52,6 +52,8 @@ Mass Decorrelation Techniques: Implement and document methods for unbiased taggi
 Data Handling and Preparation Pipeline: Modular pipeline for CMS open data and simulated datasets.
 Integration with Experimental Workflows: Guidelines for model integration into high-energy physics workflows.
 Published Research Paper: Findings published in a peer-reviewed journal or conference.
+
+
 # Schedule
 A: Molan Li
 B: Yaran Yang 
@@ -83,5 +85,9 @@ Train IN model (and DDB model)
 Evaluate and compare performance (IN, DDB, benchmark model)
 Optimize the model architecture for performance and scalability.
 Identify results and make a conclusion (All people)
+# reference
+E. A. Moreno et al., “Interaction networks for the identification of boosted H →
+bb decays”, Phys. Rev. D 102, 012010 (2020), doi : 10 . 1103 / PhysRevD . 102 .
+012010, arXiv:1909.12285
 
 
