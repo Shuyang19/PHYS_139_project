@@ -43,11 +43,11 @@ These events should include both signal events (Higgs bosons decaying to bottom 
 
 Detailed information about the charged particles within each jet.
 Features should include:
-Transverse momentum (𝑝𝑇p T)
-Energy(𝐸E)
-Pseudorapidity (𝜂η)
-Azimuthal angle (𝜙ϕ)
-Impact parameters (transverse 𝑑0d0, longitudinal 𝑧0z 0)
+Transverse momentum (𝑝𝑇)
+Energy(𝐸)
+Pseudorapidity (𝜂)
+Azimuthal angle (𝜙)
+Impact parameters (transverse 𝑑0, longitudinal 𝑧0)
 Track quality indicators
 Covariance matrix entries for the track parameters
 Particle identification (PID) flags if available
@@ -56,22 +56,22 @@ Secondary Vertices (SVs):
 Information about reconstructed secondary vertices associated with each jet.
 
  - Features should include:
-Transverse displacement (𝑑𝑥𝑦d xy)
-Longitudinal displacement (𝑑𝑧d z)
+Transverse displacement (𝑑𝑥𝑦)
+Longitudinal displacement (𝑑𝑧)
 Number of associated tracks
 Invariant mass
 Energy
-Cosine of the angle between the vertex flight direction and the jet axis (cos𝜃cosθ)
+Cosine of the angle between the vertex flight direction and the jet axis (cos𝜃)
 
  - Jet Features:
 
 Overall properties of the jets, such as:
-Jet transverse momentum (𝑝𝑇p T)
+Jet transverse momentum (𝑝𝑇)
 Jet mass (including soft-drop mass)
 Jet area
 Number of constituent particles
 Subjet information (from jet clustering algorithms)
-N-subjettiness variables (𝜏𝑁τ N)
+N-subjettiness variables (𝜏𝑁)
 Energy correlation functions
 
  - Event Metadata:
