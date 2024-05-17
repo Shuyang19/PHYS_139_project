@@ -73,8 +73,7 @@ Visualizing data(create histogram).
 Generate statics information.
 Record finding and potential features.
 - Week 9
-  
-1 .Define Metrics (Done)
+1. Define Metrics (Done)
 2. Create simple benchmark (A + D):
 Build a simple model, train the model using the data.
 Tune hyperparameters to ensure model convergence and prevent overfitting.
