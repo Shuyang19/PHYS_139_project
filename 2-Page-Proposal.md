@@ -82,9 +82,9 @@ Train the simple benchmark model.
 Evaluate its performance (Compare performance against the metrics).
 
 - Week 10
-1. Create more advanced model (A + B + C)
+1. Create more advanced model (A + B + C):
 Build more expert IN model.
-2. Train and Compare Performance (C + D + E)
+2. Train and Compare Performance (C + D + E):
 Train IN model (and DDB model).
 Evaluate and compare performance (IN, DDB, benchmark model).
 Optimize the model architecture for performance and scalability.
