@@ -64,33 +64,34 @@ C: Shuyang Zhang
 D: Michael Zhang
 E: Christian Amezcua  
 - Week 8
-Create github(done) 
-Preprocess data (A+B): 
-Check the CERN Open Data Portal, choosing the collision data and simulated data of H → b¯b jets
-Split data into training and testing data
-Exploratory data analysis(C+D+E):
-Visualizing data(create histogram)
-Generate statics information
-Record finding and potential features
+1. Create github(done) 
+2. Preprocess data (A+B): 
+Check the CERN Open Data Portal, choosing the collision data and simulated data of H → b¯b jets.
+Split data into training and testing data.
+3. Exploratory data analysis(C+D+E):
+Visualizing data(create histogram).
+Generate statics information.
+Record finding and potential features.
 - Week 9
-Define Metrics (Done)
-Create simple benchmark (A + D)
-Build a simple model, train the model using the data 
+1 .Define Metrics (Done)
+2. Create simple benchmark (A + D):
+Build a simple model, train the model using the data.
 Tune hyperparameters to ensure model convergence and prevent overfitting.
-Train and Evaluate (B + E)
-Train the simple benchmark model
+3. Train and Evaluate (B + E):
+Train the simple benchmark model.
 Evaluate its performance (Compare performance against the metrics).
+
 - Week 10
-Create more advanced model (A + B + C)
-Build more expert IN model
-Train and Compare Performance (C + D + E)
-Train IN model (and DDB model)
-Evaluate and compare performance (IN, DDB, benchmark model)
+1. Create more advanced model (A + B + C)
+Build more expert IN model.
+2. Train and Compare Performance (C + D + E)
+Train IN model (and DDB model).
+Evaluate and compare performance (IN, DDB, benchmark model).
 Optimize the model architecture for performance and scalability.
-Identify results and make a conclusion (All people)
-## reference
+Identify results and make a conclusion (All people).
+## Reference
 E. A. Moreno et al., “Interaction networks for the identification of boosted H →
-bb decays”, Phys. Rev. D 102, 012010 (2020), doi : 10 . 1103 / PhysRevD . 102 .
-012010, arXiv:1909.12285
+bb decays”
+[Link][https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.012010]
 
 
