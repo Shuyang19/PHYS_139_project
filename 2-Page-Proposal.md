@@ -7,7 +7,7 @@ Accurately identifying Higgs bosons decaying into bottom quark-antiquark pairs a
 ## Introduction
 We propose an advanced algorithm using an interaction network to identify high-transverse-momentum Higgs bosons decaying into bottom quark-antiquark pairs and distinguish them from ordinary jets. Our approach models the jet as a combination of particle-to-particle and particle-to-vertex interactions, allowing detailed representation of jet substructure. The algorithm uses features of reconstructed charged particles and secondary vertices within a jet, trained on simulated LHC collision datasets from the CMS Collaboration. Our interaction network outperforms state-of-the-art algorithms in identifying 𝐻→𝑏𝑏ˉ decays, highlighting deep learning's potential in particle identification and enhancing high-energy physics analyses.
 
-## Dataset Description
+# Dataset Description
 Dataset Components
 Simulated Events: Fully simulated proton-proton collisions, including 𝐻→𝑏𝑏ˉ and background events.
 Particle Features: Detailed information on charged particles, including transverse momentum, energy, pseudorapidity, azimuthal angle, impact parameters, track quality indicators, and particle identification flags.
